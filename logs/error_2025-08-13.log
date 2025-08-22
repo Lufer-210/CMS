@@ -1,0 +1,12 @@
+ERROR: 2025/08/13 18:27:16 logger.go:85: 审批举报失败: post_id=2, approval=2, error=记录操作日志失败: sql: converting argument $4 type: unsupported type map[string]interface {}, a map
+ERROR: 2025/08/13 18:27:32 logger.go:85: 审批举报失败: post_id=2, approval=1, error=记录操作日志失败: sql: converting argument $4 type: unsupported type map[string]interface {}, a map
+ERROR: 2025/08/13 18:33:13 logger.go:85: 审批举报失败: post_id=2, approval=1, error=记录操作日志失败: sql: converting argument $4 type: unsupported type map[string]interface {}, a map
+ERROR: 2025/08/13 18:33:47 logger.go:85: 审批举报失败: post_id=1, approval=1, error=记录操作日志失败: sql: converting argument $4 type: unsupported type map[string]interface {}, a map
+ERROR: 2025/08/13 18:33:52 logger.go:85: 审批举报失败: post_id=1, approval=2, error=记录操作日志失败: sql: converting argument $4 type: unsupported type map[string]interface {}, a map
+ERROR: 2025/08/13 18:33:56 logger.go:85: 审批举报失败: post_id=1, approval=1, error=记录操作日志失败: sql: converting argument $4 type: unsupported type map[string]interface {}, a map
+ERROR: 2025/08/13 18:44:43 logger.go:85: 审批举报失败: post_id=1, approval=1, error=更新举报状态失败: Error 1054 (42S22): Unknown column 'approved_at' in 'field list'
+ERROR: 2025/08/13 18:44:51 logger.go:85: 审批举报失败: post_id=1, approval=2, error=更新举报状态失败: Error 1054 (42S22): Unknown column 'approved_at' in 'field list'
+ERROR: 2025/08/13 18:44:59 logger.go:85: 审批举报失败: post_id=2, approval=2, error=更新举报状态失败: Error 1054 (42S22): Unknown column 'approved_at' in 'field list'
+ERROR: 2025/08/13 18:45:02 logger.go:85: 审批举报失败: post_id=2, approval=1, error=更新举报状态失败: Error 1054 (42S22): Unknown column 'approved_at' in 'field list'
+ERROR: 2025/08/13 18:45:16 logger.go:85: 审批举报失败: post_id=2, approval=1, error=更新举报状态失败: Error 1054 (42S22): Unknown column 'approved_at' in 'field list'
+ERROR: 2025/08/13 18:45:21 logger.go:85: 审批举报失败: post_id=2, approval=2, error=更新举报状态失败: Error 1054 (42S22): Unknown column 'approved_at' in 'field list'

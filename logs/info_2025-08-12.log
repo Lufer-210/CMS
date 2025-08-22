@@ -1,0 +1,4 @@
+INFO: 2025/08/12 11:26:33 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/12 11:26:33 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/12 11:31:59 logger.go:71: 用户尝试发布帖子: user_id=1
+INFO: 2025/08/12 11:31:59 logger.go:71: 用户发布帖子成功: user_id=1

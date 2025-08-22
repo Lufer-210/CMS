@@ -1,0 +1,65 @@
+package utils
+
+import (
+	"CMS/config"
+	"errors"
+	"time"
+
+	"github.com/golang-jwt/jwt/v5"
+)
+
+type UserClaims struct {
+	UserID uint `json:"user_id"`
+	jwt.RegisteredClaims
+}
+
+var ErrTokenHandlingFailed = errors.New("token handling failed")
+
+// GenerateToken 用于生成 JWT token
+func GenerateToken(userID uint) (string, error) {
+	// 加载配置
+	cfg, err := config.Load()
+	if err != nil {
+		return "", err
+	}
+
+	lifespan := cfg.JWT.ExpirationHours
+	secretKey := cfg.JWT.SecretKey
+
+	claims := UserClaims{
+		UserID: userID,
+		RegisteredClaims: jwt.RegisteredClaims{
+			ExpiresAt: jwt.NewNumericDate(time.Now().Add(time.Duration(lifespan) * time.Hour)), // 过期时间
+			IssuedAt:  jwt.NewNumericDate(time.Now()),                                          // 签发时间
+			NotBefore: jwt.NewNumericDate(time.Now()),                                          // 生效时间
+		},
+	}
+	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+	tokenString, err := token.SignedString([]byte(secretKey))
+	return tokenString, err
+}
+
+// ExtractToken 用于从 JWT token 中提取 user_id
+func ExtractToken(tokenString string) (uint, error) {
+	// 加载配置
+	cfg, err := config.Load()
+	if err != nil {
+		return 0, err
+	}
+
+	secretKey := cfg.JWT.SecretKey
+
+	token, err := jwt.ParseWithClaims(tokenString, &UserClaims{}, func(token *jwt.Token) (any, error) {
+		return []byte(secretKey), nil
+	})
+	if err != nil {
+		return 0, err
+	}
+
+	claims, ok := token.Claims.(*UserClaims)
+	if ok && token.Valid {
+		return claims.UserID, nil
+	}
+
+	return 0, ErrTokenHandlingFailed
+}

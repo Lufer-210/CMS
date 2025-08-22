@@ -1,0 +1,12 @@
+ERROR: 2025/08/11 19:35:04 logger.go:85: 用户不存在 username=1233333
+ERROR: 2025/08/11 19:35:17 logger.go:85: 用户不存在 username=1233333
+ERROR: 2025/08/11 19:35:19 logger.go:85: 用户不存在 username=1233333
+ERROR: 2025/08/11 19:35:20 logger.go:85: 用户不存在 username=1233333
+ERROR: 2025/08/11 19:35:25 logger.go:85: 用户不存在 username=1233333
+ERROR: 2025/08/11 19:58:00 logger.go:85: 用户不存在 username=12333
+ERROR: 2025/08/11 19:59:29 logger.go:85: 注册失败，用户名已存在: 123
+ERROR: 2025/08/11 20:37:33 logger.go:85: 用户不存在 username=12333336
+ERROR: 2025/08/11 21:22:49 logger.go:85: 用户不存在 username=1234
+ERROR: 2025/08/11 21:26:43 logger.go:85: 注册失败，用户名已存在: 1233
+ERROR: 2025/08/11 21:26:59 logger.go:85: 注册失败，用户名已存在: 1233
+ERROR: 2025/08/11 21:27:04 logger.go:85: 注册失败，用户名已存在: 1233

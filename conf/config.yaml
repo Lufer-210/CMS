@@ -1,0 +1,13 @@
+
+mysql:
+  host: localhost
+  port: 3306
+  user: root
+  pass: Ymw820129
+  dbname: new_cms
+jwt:
+  secret: cms_secret_key
+  lifespan: 24
+redis:
+  addr: localhost:6379
+  pass: ""

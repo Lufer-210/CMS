@@ -1,0 +1,8 @@
+INFO: 2025/08/14 19:02:37 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/14 19:02:37 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/14 19:03:46 logger.go:71: 用户尝试点赞: user_id=1, post_id=2
+INFO: 2025/08/14 19:03:46 logger.go:71: 用户点赞操作成功: user_id=1, post_id=2, likes=1
+INFO: 2025/08/14 19:04:11 logger.go:71: 用户尝试获取帖子点赞数: post_id=2, user_id=1
+INFO: 2025/08/14 19:04:11 logger.go:71: 获取帖子点赞数成功: post_id=2, likes=1
+INFO: 2025/08/14 19:13:03 logger.go:71: 用户尝试点赞: user_id=1, post_id=2
+INFO: 2025/08/14 19:13:03 logger.go:71: 用户点赞操作成功: user_id=1, post_id=2, likes=0

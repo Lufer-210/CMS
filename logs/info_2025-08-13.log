@@ -1,0 +1,41 @@
+INFO: 2025/08/13 17:44:22 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/13 17:44:22 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/13 17:45:33 logger.go:71: 用户尝试发布帖子: user_id=1
+INFO: 2025/08/13 17:45:33 logger.go:71: 用户发布帖子成功: user_id=1
+INFO: 2025/08/13 18:01:35 logger.go:71: 用户尝试删除帖子: user_id=1, post_id=1
+INFO: 2025/08/13 18:01:35 logger.go:71: 用户删除帖子成功: user_id=1, post_id=1
+INFO: 2025/08/13 18:03:43 logger.go:71: 用户尝试修改帖子: user_id=1, post_id=2
+INFO: 2025/08/13 18:03:43 logger.go:71: 用户修改帖子成功: user_id=1, post_id=2
+INFO: 2025/08/13 18:04:22 logger.go:71: 用户尝试获取帖子点赞数: post_id=2, user_id=2
+INFO: 2025/08/13 18:04:22 logger.go:71: 获取帖子点赞数成功: post_id=2, likes=0
+INFO: 2025/08/13 18:06:32 logger.go:71: 用户尝试点赞: user_id=2, post_id=2
+INFO: 2025/08/13 18:06:32 logger.go:71: 用户点赞操作成功: user_id=2, post_id=2, likes=1
+INFO: 2025/08/13 18:07:24 logger.go:71: 用户尝试点赞: user_id=2, post_id=2
+INFO: 2025/08/13 18:07:24 logger.go:71: 用户点赞操作成功: user_id=2, post_id=2, likes=0
+INFO: 2025/08/13 18:08:58 logger.go:71: 用户尝试点赞: user_id=2, post_id=2
+INFO: 2025/08/13 18:08:58 logger.go:71: 用户点赞操作成功: user_id=2, post_id=2, likes=1
+INFO: 2025/08/13 18:09:42 logger.go:71: 管理员尝试获取待审批举报列表: admin_user_id=1
+INFO: 2025/08/13 18:09:42 logger.go:71: 获取待审批举报列表成功: admin_user_id=1, count=0
+INFO: 2025/08/13 18:09:49 logger.go:71: 管理员尝试获取待审批举报列表: admin_user_id=1
+INFO: 2025/08/13 18:09:49 logger.go:71: 获取待审批举报列表成功: admin_user_id=1, count=0
+INFO: 2025/08/13 18:10:05 logger.go:71: 管理员尝试获取待审批举报列表: admin_user_id=1
+INFO: 2025/08/13 18:10:05 logger.go:71: 获取待审批举报列表成功: admin_user_id=1, count=0
+INFO: 2025/08/13 18:10:52 logger.go:71: 管理员尝试获取待审批举报列表: admin_user_id=1
+INFO: 2025/08/13 18:10:52 logger.go:71: 获取待审批举报列表成功: admin_user_id=1, count=0
+INFO: 2025/08/13 18:21:06 logger.go:71: 用户举报帖子成功: user_id=1, post_id=2
+INFO: 2025/08/13 18:25:41 logger.go:71: 管理员尝试获取待审批举报列表: admin_user_id=1
+INFO: 2025/08/13 18:25:41 logger.go:71: 获取待审批举报列表成功: admin_user_id=1, count=1
+INFO: 2025/08/13 18:27:16 logger.go:71: 管理员尝试审批举报: admin_user_id=1, post_id=2, approval=2
+INFO: 2025/08/13 18:27:32 logger.go:71: 管理员尝试审批举报: admin_user_id=1, post_id=2, approval=1
+INFO: 2025/08/13 18:33:13 logger.go:71: 管理员尝试审批举报: admin_user_id=1, post_id=2, approval=1
+INFO: 2025/08/13 18:33:47 logger.go:71: 管理员尝试审批举报: admin_user_id=1, post_id=1, approval=1
+INFO: 2025/08/13 18:33:52 logger.go:71: 管理员尝试审批举报: admin_user_id=1, post_id=1, approval=2
+INFO: 2025/08/13 18:33:56 logger.go:71: 管理员尝试审批举报: admin_user_id=1, post_id=1, approval=1
+INFO: 2025/08/13 18:44:43 logger.go:71: 管理员尝试审批举报: admin_user_id=1, post_id=1, approval=1
+INFO: 2025/08/13 18:44:51 logger.go:71: 管理员尝试审批举报: admin_user_id=1, post_id=1, approval=2
+INFO: 2025/08/13 18:44:59 logger.go:71: 管理员尝试审批举报: admin_user_id=1, post_id=2, approval=2
+INFO: 2025/08/13 18:45:02 logger.go:71: 管理员尝试审批举报: admin_user_id=1, post_id=2, approval=1
+INFO: 2025/08/13 18:45:16 logger.go:71: 管理员尝试审批举报: admin_user_id=1, post_id=2, approval=1
+INFO: 2025/08/13 18:45:21 logger.go:71: 管理员尝试审批举报: admin_user_id=1, post_id=2, approval=2
+INFO: 2025/08/13 18:57:48 logger.go:71: 管理员尝试审批举报: admin_user_id=1, post_id=2, approval=2
+INFO: 2025/08/13 18:57:48 logger.go:71: 管理员审批举报成功: admin_user_id=1, post_id=2, approval=2

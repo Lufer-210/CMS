@@ -1,0 +1,73 @@
+INFO: 2025/08/11 19:15:19 logger.go:71: 用户注册成功: username=123, name=ximo, user_type=2
+INFO: 2025/08/11 19:24:22 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 19:24:22 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 19:31:07 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 19:31:07 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 19:31:27 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 19:31:27 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 19:33:47 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 19:33:47 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 19:33:59 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 19:33:59 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 19:34:37 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 19:34:37 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 19:35:04 logger.go:71: 用户尝试登录: 1233333
+INFO: 2025/08/11 19:35:17 logger.go:71: 用户尝试登录: 1233333
+INFO: 2025/08/11 19:35:19 logger.go:71: 用户尝试登录: 1233333
+INFO: 2025/08/11 19:35:20 logger.go:71: 用户尝试登录: 1233333
+INFO: 2025/08/11 19:35:25 logger.go:71: 用户尝试登录: 1233333
+INFO: 2025/08/11 19:52:49 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 19:52:49 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 19:52:53 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 19:52:53 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 19:55:02 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 19:55:02 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 19:57:23 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 19:57:23 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 19:58:00 logger.go:71: 用户尝试登录: 12333
+INFO: 2025/08/11 19:58:23 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 19:58:57 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 19:59:07 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 19:59:50 logger.go:71: 用户注册成功: username=1233, name=ximmo, user_type=2
+INFO: 2025/08/11 20:20:21 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 20:20:21 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 20:24:25 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 20:24:25 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 20:28:35 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 20:28:35 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 20:29:09 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 20:29:09 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 20:37:00 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 20:37:00 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 20:37:22 logger.go:71: 用户尝试登录: 1233
+INFO: 2025/08/11 20:37:22 logger.go:71: 用户登录成功 user_id=2, username=1233, user_type=2
+INFO: 2025/08/11 20:37:33 logger.go:71: 用户尝试登录: 12333336
+INFO: 2025/08/11 20:38:24 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 20:38:31 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 20:38:31 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 20:41:33 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 20:41:42 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 20:42:37 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 20:43:41 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 20:53:55 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 20:53:59 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 20:54:01 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 20:54:05 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 20:56:25 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 21:02:02 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 21:02:05 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 21:08:31 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 21:08:34 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 21:18:30 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 21:18:48 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 21:18:48 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 21:18:59 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 21:18:59 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 21:22:28 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 21:22:28 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 21:22:36 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 21:22:49 logger.go:71: 用户尝试登录: 1234
+INFO: 2025/08/11 21:22:57 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 21:26:28 logger.go:71: 用户尝试登录: 123
+INFO: 2025/08/11 21:26:28 logger.go:71: 用户登录成功 user_id=1, username=123, user_type=2
+INFO: 2025/08/11 21:27:13 logger.go:71: 用户注册成功: username=12343, name=ximmmmmo, user_type=2

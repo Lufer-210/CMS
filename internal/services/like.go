@@ -1,3 +1,4 @@
+// internal/services/like.go
 package services
 
 import (
@@ -45,11 +46,11 @@ func GetLikesByPostID(postID uint) (int, error) {
 	// 3. 同步到Redis（设置5分钟过期）
 	if err := redis.RedisClient.Set(ctx, key, count, cacheExpire*time.Second).Err(); err != nil {
 		logger.GetLogger().Errorf("同步点赞数到Redis失败: postID=%d, err=%v", postID, err)
-
 	}
 
 	return int(count), nil
 }
+
 func IsUserLikedPost(postID, userID uint) (bool, error) {
 	key := userLikesKey + strconv.Itoa(int(userID))
 	field := strconv.Itoa(int(postID))
@@ -82,22 +83,19 @@ func IsUserLikedPost(postID, userID uint) (bool, error) {
 	}
 
 	return userLiked, nil
-} // 此处为补全的闭合大括号
+}
 
 // ToggleLike 切换用户对帖子的点赞状态
-func ToggleLike(postIDStr, userIDStr string) (map[string]interface{}, *models.ServiceError) {
-	// 解析post_id
-	postID, err := strconv.ParseUint(postIDStr, 10, 64)
-	if err != nil || postID == 0 {
+func ToggleLike(postID, userID uint) (map[string]interface{}, *models.ServiceError) {
+	// 参数验证
+	if postID == 0 {
 		return nil, &models.ServiceError{
 			Code:    1001,
 			Message: "无效的帖子ID",
 		}
 	}
 
-	// 解析user_id
-	userID, err := strconv.ParseUint(userIDStr, 10, 64)
-	if err != nil || userID == 0 {
+	if userID == 0 {
 		return nil, &models.ServiceError{
 			Code:    1002,
 			Message: "无效的用户ID",
@@ -106,11 +104,11 @@ func ToggleLike(postIDStr, userIDStr string) (map[string]interface{}, *models.Se
 
 	ctx := context.Background()
 	postKey := postLikesKey + strconv.Itoa(int(postID))
-	userKey := userLikesKey + userIDStr // hash key：user:likes:{userID}
-	postIDField := postIDStr            // hash field：postID
+	userKey := userLikesKey + strconv.Itoa(int(userID)) // hash key：user:likes:{userID}
+	postIDField := strconv.Itoa(int(postID))            // hash field：postID
 
 	// 1. 先查询用户当前点赞状态（用于判断操作类型）
-	isLiked, err := IsUserLikedPost(uint(postID), uint(userID))
+	isLiked, err := IsUserLikedPost(postID, userID)
 	if err != nil {
 		return nil, &models.ServiceError{
 			Code:    1003,
@@ -134,8 +132,8 @@ func ToggleLike(postIDStr, userIDStr string) (map[string]interface{}, *models.Se
 	} else {
 		// 点赞：新增数据库记录
 		like := models.Like{
-			PostID: uint(postID),
-			UserID: uint(userID),
+			PostID: postID,
+			UserID: userID,
 		}
 		dbErr = tx.Create(&like).Error
 	}
@@ -149,6 +147,8 @@ func ToggleLike(postIDStr, userIDStr string) (map[string]interface{}, *models.Se
 	}
 
 	// 3. 数据库操作成功后，执行Redis操作（确保缓存与数据库一致）
+	postIDStr := strconv.Itoa(int(postID))
+
 	_, redisErr := redis.RedisClient.Pipelined(ctx, func(pipe goredis.Pipeliner) error {
 		if isLiked {
 			// 取消点赞：删除hash中的field
@@ -189,7 +189,7 @@ func ToggleLike(postIDStr, userIDStr string) (map[string]interface{}, *models.Se
 	}
 
 	// 5. 获取最新点赞数（带滑动过期）
-	likes, err := GetLikesByPostID(uint(postID))
+	likes, err := GetLikesByPostID(postID)
 	if err != nil {
 		return nil, &models.ServiceError{
 			Code:    1004,

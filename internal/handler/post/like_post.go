@@ -5,7 +5,6 @@ import (
 	"CMS/internal/middleware"
 	"CMS/internal/services"
 	"CMS/pkg/utils"
-	"strconv"
 
 	"github.com/gin-gonic/gin"
 )
@@ -34,10 +33,7 @@ func LikePost(c *gin.Context) {
 	logger.GetLogger().Infof("用户尝试点赞: user_id=%d, post_id=%d", userID, data.PostID)
 
 	// 调用服务层切换点赞状态
-	result, serviceErr := services.ToggleLike(
-		strconv.FormatUint(uint64(data.PostID), 10),
-		strconv.FormatUint(uint64(userID), 10),
-	)
+	result, serviceErr := services.ToggleLike(data.PostID, userID)
 	if serviceErr != nil {
 		logger.GetLogger().Errorf("点赞操作失败: user_id=%d, post_id=%d, error=%v", userID, data.PostID, serviceErr)
 		utils.JsonErrorWithCode(c, serviceErr.Code, serviceErr.Message)
